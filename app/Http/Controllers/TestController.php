@@ -12,7 +12,7 @@ class TestController extends Controller
     public function testForm(Request $request)
     {
         try {
-            // DB::beginTransaction();
+            DB::beginTransaction();
 
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
